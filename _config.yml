@@ -220,7 +220,7 @@ collections:
     output: false
     permalink: /:collection/:path/
   publications:
-    output: true
+    output: false
     permalink: /:collection/:path/
   portfolio:
     output: false
@@ -228,8 +228,7 @@ collections:
   talks:
     output: false
     permalink: /:collection/:path/
-
-
+    
 # These settings control how pages and collections are included in the site
 defaults:
   # _posts
@@ -237,6 +236,7 @@ defaults:
       path: ""
       type: posts
     values:
+      published: false
       layout: single
       author_profile: true
       read_time: true
