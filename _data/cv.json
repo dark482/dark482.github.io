@@ -1,152 +1,126 @@
 {
   "basics": {
-    "name": "Your Sidebar Name",
-    "email": "none@example.org",
+    "name": "Dongxu Shen",
+    "email": "sdx13431026699@gmail.com",
     "phone": "",
-    "website": "https://academicpages.github.io",
-    "summary": "Currently employed at Red Brick University. Short biography for the left-hand sidebar",
+    "website": "https://dark482.github.io",
+    "summary": "Undergraduate student at Hong Kong University of Science and Technology (Guangzhou), majoring in Artificial Intelligence. Research interests include medical image analysis, large language model security, 3D Gaussian splatting for digital humans, and multimodal learning.",
     "location": {
       "address": "",
       "postalCode": "",
-      "city": "Earth",
-      "countryCode": "US",
-      "region": ""
+      "city": "Guangzhou",
+      "countryCode": "CN",
+      "region": "Guangdong"
     },
     "profiles": [
       {
         "network": "Google Scholar",
-        "username": "",
+        "username": "DongxuShen",
         "url": "https://scholar.google.com/citations?user=PS_CX0AAAAAJ"
       },
       {
-        "network": "ORCID",
-        "username": "",
-        "url": "http://orcid.org/yourorcidurl"
-      },
-      {
         "network": "GitHub",
-        "username": "academicpages",
-        "url": "https://github.com/academicpages"
+        "username": "dark482",
+        "url": "https://github.com/dark482"
       }
     ]
   },
-  "work": [],
+  "work": [
+    {
+      "name": "Digital Human 3D Gaussian Splatting Project",
+      "position": "Research Contributor",
+      "startDate": "2025-07",
+      "endDate": "2025-08",
+      "summary": "Participated in the MoGaFace project focusing on 3D Gaussian Splatting for digital humans.",
+      "highlights": [
+        "(Preprint, Contributor) MoGaFace: Momentum-Guided and Texture-Aware Gaussian Avatars for Consistent Facial Geometry",
+        "Contributed to baseline implementation and designed key figures and visualizations for the paper."
+      ]
+    },
+    {
+      "name": "Medical Image Analysis Research",
+      "position": "Co-First Author",
+      "startDate": "2025-05",
+      "endDate": "2025-08",
+      "summary": "Worked with Shidang Xu (SCUT) on large-patch strategies for Whole Slide Image classification.",
+      "highlights": [
+        "(Preprint, Co-First Author) Minimal High-Resolution Patches Are Sufficient for Whole Slide Image Representation via Cascaded Dual-Scale Reconstruction",
+        "Developed a feature extractor using 2048-size patches, achieving competitive performance with minimal training samples."
+      ]
+    },
+    {
+      "name": "Large Language Model Jailbreak Research",
+      "position": "Research Intern",
+      "startDate": "2024-09",
+      "endDate": "2024-11",
+      "summary": "Worked with Prof. Xuming Hu (HKUST) on adversarial security of large language models.",
+      "highlights": [
+        "Explored black-box defense simulations for GPT models.",
+        "Designed and implemented prompt-based jailbreak attacks using crafted character sequences."
+      ]
+    }
+  ],
   "education": [
     {
-      "institution": "GitHub University",
-      "area": "Ph.D in Version Control Theory",
-      "studyType": "",
-      "startDate": "",
-      "endDate": "2018",
-      "gpa": null,
-      "courses": []
-    },
-    {
-      "institution": "GitHub University",
-      "area": "M.S. in Jekyll",
-      "studyType": "",
-      "startDate": "",
-      "endDate": "2014",
-      "gpa": null,
-      "courses": []
-    },
-    {
-      "institution": "GitHub University",
-      "area": "B.S. in GitHub",
-      "studyType": "",
-      "startDate": "",
-      "endDate": "2012",
+      "institution": "Hong Kong University of Science and Technology (Guangzhou)",
+      "area": "Artificial Intelligence",
+      "studyType": "B.S.",
+      "startDate": "2023-08",
+      "endDate": "Present",
       "gpa": null,
       "courses": []
     }
   ],
-  "skills": [],
-  "languages": [],
-  "interests": [],
-  "references": [],
+  "skills": [
+    {
+      "name": "Programming Languages",
+      "level": "",
+      "keywords": ["Python", "C++", "JavaScript (TypeScript)", "Bash/Shell scripting"]
+    },
+    {
+      "name": "Mathematics",
+      "level": "",
+      "keywords": ["Calculus", "Linear Algebra", "Complex Functions", "Probability", "Statistics", "Convex Optimization"]
+    },
+    {
+      "name": "Platforms & Tools",
+      "level": "",
+      "keywords": ["Windows", "Linux", "VSCode", "Git", "LaTeX", "Markdown"]
+    },
+    {
+      "name": "Frameworks & Libraries",
+      "level": "",
+      "keywords": ["PyTorch (Geometric)", "Pandas", "Scikit-learn", "NumPy", "SciPy", "OpenCV", "GBDTs (CatBoost)", "Visualization (Matplotlib, Seaborn, Plotly)"]
+    }
+  ],
+  "projects": [
+    {
+      "name": "Financial RAG System",
+      "startDate": "2024-07",
+      "endDate": "2024-08",
+      "summary": "Developed a domain-specific Retrieval-Augmented Generation (RAG) system under Prof. Xuming Hu (HKUST).",
+      "highlights": [
+        "Collected and curated financial data for domain adaptation.",
+        "Designed a re-ranking algorithm to improve retrieval relevance.",
+        "Integrated with a generative language model for accurate, context-aware responses.",
+        "Built a frontend demo showcasing real-time query handling."
+      ]
+    }
+  ],
   "publications": [
     {
-      "name": "Paper Title Number 1",
-      "publisher": "Journal 1",
-      "releaseDate": "2009-10-01",
-      "website": "http://academicpages.github.io/files/paper1.pdf",
-      "summary": "This paper is about the number 1. The number 2 is left for future work."
+      "name": "MoGaFace: Momentum-Guided and Texture-Aware Gaussian Avatars for Consistent Facial Geometry",
+      "publisher": "Preprint",
+      "releaseDate": "2025-08",
+      "website": "",
+      "summary": "Contributor. Designed visualizations and implemented part of the baseline framework."
     },
     {
-      "name": "Paper Title Number 2",
-      "publisher": "Journal 1",
-      "releaseDate": "2010-10-01",
-      "website": "http://academicpages.github.io/files/paper2.pdf",
-      "summary": "This paper is about the number 2. The number 3 is left for future work."
-    },
-    {
-      "name": "Paper Title Number 3",
-      "publisher": "Journal 1",
-      "releaseDate": "2015-10-01",
-      "website": "http://academicpages.github.io/files/paper3.pdf",
-      "summary": "This paper is about the number 3. The number 4 is left for future work."
-    },
-    {
-      "name": "Paper Title Number 4",
-      "publisher": "GitHub Journal of Bugs",
-      "releaseDate": "2024-02-17",
-      "website": "http://academicpages.github.io/files/paper3.pdf",
-      "summary": "This paper is about fixing template issue #693."
-    }
-  ],
-  "presentations": [
-    {
-      "name": "Talk 1 on Relevant Topic in Your Field",
-      "event": "UC San Francisco, Department of Testing",
-      "date": "2012-03-01",
-      "location": "San Francisco, CA, USA",
-      "description": ""
-    },
-    {
-      "name": "Tutorial 1 on Relevant Topic in Your Field",
-      "event": "UC-Berkeley Institute for Testing Science",
-      "date": "2013-03-01",
-      "location": "Berkeley, CA, USA",
-      "description": ""
-    },
-    {
-      "name": "Talk 2 on Relevant Topic in Your Field",
-      "event": "London School of Testing",
-      "date": "2014-02-01",
-      "location": "London, UK",
-      "description": ""
-    },
-    {
-      "name": "Conference Proceeding talk 3 on Relevant Topic in Your Field",
-      "event": "Testing Institute of America 2014 Annual Conference",
-      "date": "2014-03-01",
-      "location": "Los Angeles, CA, USA",
-      "description": ""
-    }
-  ],
-  "teaching": [
-    {
-      "course": "Teaching experience 1",
-      "institution": "University 1, Department",
-      "date": "2014-01-01",
-      "role": "Undergraduate course",
-      "description": ""
-    },
-    {
-      "course": "Teaching experience 2",
-      "institution": "University 1, Department",
-      "date": "2015-01-01",
-      "role": "Workshop",
-      "description": ""
-    }
-  ],
-  "portfolio": [
-    {
-      "name": "Portfolio item number 1",
-      "category": "portfolio",
-      "date": "",
-      "url": "",
-      "description": "Short description of portfolio item number 1<br/><img src='/images/500x300.png'>"
+      "name": "Minimal High-Resolution Patches Are Sufficient for Whole Slide Image Representation via Cascaded Dual-Scale Reconstruction",
+      "publisher": "Preprint",
+      "releaseDate": "2025-08",
+      "website": "",
+      "summary": "Co-First Author. Proposed 2048-size patch feature extractor for efficient Whole Slide Image classification."
     }
   ]
 }
