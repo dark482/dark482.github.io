@@ -1,7 +1,7 @@
 ---
 title: "About Me "
 sitemap: false
-permalink: /about/
+permalink: /
 ---
 
 # Hi, I'm Dongxu Shen 
