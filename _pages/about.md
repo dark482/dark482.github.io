@@ -1,3 +1,9 @@
+---
+title: "About Me "
+sitemap: false
+permalink: /about/
+---
+
 # Hi, I'm Dongxu Shen 
 
 I am a B.S. student in **Artificial Intelligence** at **HKUST (Guangzhou)**.  
