@@ -27,7 +27,7 @@ author:
   pronouns         : # example: "he/his"  
   bio              : "UG,HKUST(GZ)"
   location         : "China"
-  employer         : "Hong Kong university of science and technology(Guangzhou)"
+  # employer         : "Hong Kong university of science and technology(Guangzhou)"
   uri              : # URL
   email            : "sdx13431026699@gmial.com" 
 
