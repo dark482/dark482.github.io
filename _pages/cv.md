@@ -9,10 +9,6 @@ redirect_from:
 
 {% include base_path %}
 
-# Dongxu Shen
-📧 [sdx13431026699@gmail.com](mailto:sdx13431026699@gmail.com)  
-
----
 
 ## Education
 - **Hong Kong University of Science and Technology (Guangzhou)**  
