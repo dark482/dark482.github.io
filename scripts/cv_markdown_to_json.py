@@ -13,6 +13,16 @@ from datetime import datetime, date
 from pathlib import Path
 import glob
 
+# Pre-compile regex patterns for better performance
+FRONT_MATTER_PATTERN = re.compile(r'^---\s*(.*?)\s*---', re.DOTALL)
+EQUALS_LINE_PATTERN = re.compile(r'^=+$')
+SECTION_HEADER_PATTERN = re.compile(r'^([A-Za-z\s]+)$')
+EDUCATION_ENTRY_PATTERN = re.compile(r'([^,]+), ([^,]+), (\d{4})(.*)')
+GPA_PATTERN = re.compile(r'GPA: ([\d\.]+)')
+POSITION_PATTERN = re.compile(r'(.*?), (.*?)(?:, |$)')
+DATE_RANGE_PATTERN = re.compile(r'(\d{4})\s*-\s*(\d{4}|present)', re.IGNORECASE)
+SKILL_CATEGORY_PATTERN = re.compile(r'(?:^|\n)(\w+.*?):\s*(.*?)(?=\n\w+.*?:|\Z)', re.DOTALL)
+
 # Custom JSON encoder to handle date objects
 class DateTimeEncoder(json.JSONEncoder):
     def default(self, obj):
@@ -25,8 +35,8 @@ def parse_markdown_cv(md_file):
     with open(md_file, 'r', encoding='utf-8') as file:
         content = file.read()
     
-    # Remove YAML front matter
-    content = re.sub(r'^---.*?---\s*', '', content, flags=re.DOTALL)
+    # Remove YAML front matter using pre-compiled pattern
+    content = FRONT_MATTER_PATTERN.sub('', content)
     
     # Extract sections
     sections = {}
@@ -34,10 +44,10 @@ def parse_markdown_cv(md_file):
     section_content = []
     
     for line in content.split('\n'):
-        if re.match(r'^=+$', line):
+        if EQUALS_LINE_PATTERN.match(line):
             continue
         
-        section_match = re.match(r'^([A-Za-z\s]+)$', line.strip())
+        section_match = SECTION_HEADER_PATTERN.match(line.strip())
         if section_match and len(line.strip()) > 0:
             if current_section:
                 sections[current_section] = '\n'.join(section_content).strip()
@@ -166,13 +176,13 @@ def parse_education(education_text):
     entries = re.findall(r'\* (.*?)(?=\n\*|\Z)', education_text, re.DOTALL)
     
     for entry in entries:
-        # Parse degree, institution, and year
-        match = re.match(r'([^,]+), ([^,]+), (\d{4})(.*)', entry.strip())
+        # Parse degree, institution, and year using pre-compiled pattern
+        match = EDUCATION_ENTRY_PATTERN.match(entry.strip())
         if match:
             degree, institution, year, additional = match.groups()
             
-            # Extract GPA if available
-            gpa_match = re.search(r'GPA: ([\d\.]+)', additional)
+            # Extract GPA if available using pre-compiled pattern
+            gpa_match = GPA_PATTERN.search(additional)
             gpa = gpa_match.group(1) if gpa_match else None
             
             education_entries.append({
@@ -199,15 +209,15 @@ def parse_work_experience(work_text):
         if not lines:
             continue
             
-        # Parse position and company
+        # Parse position and company using pre-compiled pattern
         first_line = lines[0].strip()
-        position_match = re.match(r'(.*?), (.*?)(?:, |$)', first_line)
+        position_match = POSITION_PATTERN.match(first_line)
         
         if position_match:
             position, company = position_match.groups()
             
-            # Extract dates if available
-            date_match = re.search(r'(\d{4})\s*-\s*(\d{4}|present)', entry, re.IGNORECASE)
+            # Extract dates if available using pre-compiled pattern
+            date_match = DATE_RANGE_PATTERN.search(entry)
             start_date = date_match.group(1) if date_match else ""
             end_date = date_match.group(2) if date_match else ""
             
@@ -233,8 +243,8 @@ def parse_skills(skills_text):
     """Parse skills section from markdown."""
     skills_entries = []
     
-    # Extract skill categories
-    categories = re.findall(r'(?:^|\n)(\w+.*?):\s*(.*?)(?=\n\w+.*?:|\Z)', skills_text, re.DOTALL)
+    # Extract skill categories using pre-compiled pattern
+    categories = SKILL_CATEGORY_PATTERN.findall(skills_text)
     
     for category, skills in categories:
         # Extract individual skills
@@ -255,25 +265,31 @@ def parse_publications(pub_dir):
     if not os.path.exists(pub_dir):
         return publications
     
-    for pub_file in sorted(glob.glob(os.path.join(pub_dir, "*.md"))):
-        with open(pub_file, 'r', encoding='utf-8') as file:
-            content = file.read()
-        
-        # Extract front matter
-        front_matter_match = re.match(r'^---\s*(.*?)\s*---', content, re.DOTALL)
-        if front_matter_match:
-            front_matter = yaml.safe_load(front_matter_match.group(1))
+    # Use Path.glob which is more efficient than glob.glob
+    pub_files = sorted(Path(pub_dir).glob("*.md"))
+    
+    for pub_file in pub_files:
+        try:
+            with open(pub_file, 'r', encoding='utf-8') as file:
+                content = file.read()
             
-            # Extract publication details
-            pub_entry = {
-                "name": front_matter.get('title', ''),
-                "publisher": front_matter.get('venue', ''),
-                "releaseDate": front_matter.get('date', ''),
-                "website": front_matter.get('paperurl', ''),
-                "summary": front_matter.get('excerpt', '')
-            }
-            
-            publications.append(pub_entry)
+            # Extract front matter using pre-compiled pattern
+            front_matter_match = FRONT_MATTER_PATTERN.match(content)
+            if front_matter_match:
+                front_matter = yaml.safe_load(front_matter_match.group(1))
+                
+                # Extract publication details
+                pub_entry = {
+                    "name": front_matter.get('title', ''),
+                    "publisher": front_matter.get('venue', ''),
+                    "releaseDate": front_matter.get('date', ''),
+                    "website": front_matter.get('paperurl', ''),
+                    "summary": front_matter.get('excerpt', '')
+                }
+                
+                publications.append(pub_entry)
+        except Exception as e:
+            print(f"Warning: Failed to parse {pub_file}: {e}")
     
     return publications
 
@@ -284,25 +300,31 @@ def parse_talks(talks_dir):
     if not os.path.exists(talks_dir):
         return talks
     
-    for talk_file in sorted(glob.glob(os.path.join(talks_dir, "*.md"))):
-        with open(talk_file, 'r', encoding='utf-8') as file:
-            content = file.read()
-        
-        # Extract front matter
-        front_matter_match = re.match(r'^---\s*(.*?)\s*---', content, re.DOTALL)
-        if front_matter_match:
-            front_matter = yaml.safe_load(front_matter_match.group(1))
+    # Use Path.glob which is more efficient than glob.glob
+    talk_files = sorted(Path(talks_dir).glob("*.md"))
+    
+    for talk_file in talk_files:
+        try:
+            with open(talk_file, 'r', encoding='utf-8') as file:
+                content = file.read()
             
-            # Extract talk details
-            talk_entry = {
-                "name": front_matter.get('title', ''),
-                "event": front_matter.get('venue', ''),
-                "date": front_matter.get('date', ''),
-                "location": front_matter.get('location', ''),
-                "description": front_matter.get('excerpt', '')
-            }
-            
-            talks.append(talk_entry)
+            # Extract front matter using pre-compiled pattern
+            front_matter_match = FRONT_MATTER_PATTERN.match(content)
+            if front_matter_match:
+                front_matter = yaml.safe_load(front_matter_match.group(1))
+                
+                # Extract talk details
+                talk_entry = {
+                    "name": front_matter.get('title', ''),
+                    "event": front_matter.get('venue', ''),
+                    "date": front_matter.get('date', ''),
+                    "location": front_matter.get('location', ''),
+                    "description": front_matter.get('excerpt', '')
+                }
+                
+                talks.append(talk_entry)
+        except Exception as e:
+            print(f"Warning: Failed to parse {talk_file}: {e}")
     
     return talks
 
@@ -313,25 +335,31 @@ def parse_teaching(teaching_dir):
     if not os.path.exists(teaching_dir):
         return teaching
     
-    for teaching_file in sorted(glob.glob(os.path.join(teaching_dir, "*.md"))):
-        with open(teaching_file, 'r', encoding='utf-8') as file:
-            content = file.read()
-        
-        # Extract front matter
-        front_matter_match = re.match(r'^---\s*(.*?)\s*---', content, re.DOTALL)
-        if front_matter_match:
-            front_matter = yaml.safe_load(front_matter_match.group(1))
+    # Use Path.glob which is more efficient than glob.glob
+    teaching_files = sorted(Path(teaching_dir).glob("*.md"))
+    
+    for teaching_file in teaching_files:
+        try:
+            with open(teaching_file, 'r', encoding='utf-8') as file:
+                content = file.read()
             
-            # Extract teaching details
-            teaching_entry = {
-                "course": front_matter.get('title', ''),
-                "institution": front_matter.get('venue', ''),
-                "date": front_matter.get('date', ''),
-                "role": front_matter.get('type', ''),
-                "description": front_matter.get('excerpt', '')
-            }
-            
-            teaching.append(teaching_entry)
+            # Extract front matter using pre-compiled pattern
+            front_matter_match = FRONT_MATTER_PATTERN.match(content)
+            if front_matter_match:
+                front_matter = yaml.safe_load(front_matter_match.group(1))
+                
+                # Extract teaching details
+                teaching_entry = {
+                    "course": front_matter.get('title', ''),
+                    "institution": front_matter.get('venue', ''),
+                    "date": front_matter.get('date', ''),
+                    "role": front_matter.get('type', ''),
+                    "description": front_matter.get('excerpt', '')
+                }
+                
+                teaching.append(teaching_entry)
+        except Exception as e:
+            print(f"Warning: Failed to parse {teaching_file}: {e}")
     
     return teaching
 
@@ -342,25 +370,31 @@ def parse_portfolio(portfolio_dir):
     if not os.path.exists(portfolio_dir):
         return portfolio
     
-    for portfolio_file in sorted(glob.glob(os.path.join(portfolio_dir, "*.md"))):
-        with open(portfolio_file, 'r', encoding='utf-8') as file:
-            content = file.read()
-        
-        # Extract front matter
-        front_matter_match = re.match(r'^---\s*(.*?)\s*---', content, re.DOTALL)
-        if front_matter_match:
-            front_matter = yaml.safe_load(front_matter_match.group(1))
+    # Use Path.glob which is more efficient than glob.glob
+    portfolio_files = sorted(Path(portfolio_dir).glob("*.md"))
+    
+    for portfolio_file in portfolio_files:
+        try:
+            with open(portfolio_file, 'r', encoding='utf-8') as file:
+                content = file.read()
             
-            # Extract portfolio details
-            portfolio_entry = {
-                "name": front_matter.get('title', ''),
-                "category": front_matter.get('collection', 'portfolio'),
-                "date": front_matter.get('date', ''),
-                "url": front_matter.get('permalink', ''),
-                "description": front_matter.get('excerpt', '')
-            }
-            
-            portfolio.append(portfolio_entry)
+            # Extract front matter using pre-compiled pattern
+            front_matter_match = FRONT_MATTER_PATTERN.match(content)
+            if front_matter_match:
+                front_matter = yaml.safe_load(front_matter_match.group(1))
+                
+                # Extract portfolio details
+                portfolio_entry = {
+                    "name": front_matter.get('title', ''),
+                    "category": front_matter.get('collection', 'portfolio'),
+                    "date": front_matter.get('date', ''),
+                    "url": front_matter.get('permalink', ''),
+                    "description": front_matter.get('excerpt', '')
+                }
+                
+                portfolio.append(portfolio_entry)
+        except Exception as e:
+            print(f"Warning: Failed to parse {portfolio_file}: {e}")
     
     return portfolio
 
