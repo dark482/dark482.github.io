@@ -18,3 +18,9 @@ vendor/
 
 # Ignore folders related to IDEs
 .vscode/
+
+# Ignore Python cache files
+__pycache__/
+*.pyc
+*.pyo
+.geocode_cache.json

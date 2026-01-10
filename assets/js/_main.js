@@ -16,7 +16,7 @@ let determineComputedTheme = () => {
   if (themeSetting != "system") {
     return themeSetting;
   }
-  return (userPref && userPref("(prefers-color-scheme: dark)").matches) ? "dark" : "light";
+  return (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) ? "dark" : "light";
 };
 
 // detect OS/browser preference
@@ -59,6 +59,10 @@ let plotlyElements = document.querySelectorAll("pre>code.language-plotly");
 if (plotlyElements.length > 0) {
   document.addEventListener("readystatechange", () => {
     if (document.readyState === "complete") {
+      // Cache the computed theme to avoid recalculating for each element
+      const computedTheme = determineComputedTheme();
+      const theme = (computedTheme === "dark") ? plotlyDarkLayout : plotlyLightLayout;
+      
       plotlyElements.forEach((elem) => {
         // Parse the Plotly JSON data and hide it
         var jsonData = JSON.parse(elem.textContent);
@@ -69,7 +73,6 @@ if (plotlyElements.length > 0) {
         elem.parentElement.after(chartElement);
 
         // Set the theme for the plot and render it
-        const theme = (determineComputedTheme() === "dark") ? plotlyDarkLayout : plotlyLightLayout;
         if (jsonData.layout) {
           jsonData.layout.template = (jsonData.layout.template) ? { ...theme, ...jsonData.layout.template } : theme;
         } else {
@@ -102,19 +105,23 @@ $(document).ready(function () {
   // Enable the theme toggle
   $('#theme-toggle').on('click', toggleTheme);
 
-  // Enable the sticky footer
+  // Enable the sticky footer with debounced resize handling
   var bumpIt = function () {
     $("body").css("margin-bottom", $(".page__footer").outerHeight(true));
   }
+  var didResize = false;
+  var resizeTimeout;
   $(window).resize(function () {
     didResize = true;
+    // Debounce resize events - only execute after 250ms of no resize activity
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(function() {
+      if (didResize) {
+        didResize = false;
+        bumpIt();
+      }
+    }, 250);
   });
-  setInterval(function () {
-    if (didResize) {
-      didResize = false;
-      bumpIt();
-    }}, 250);
-  var didResize = false;
   bumpIt();
 
   // FitVids init
