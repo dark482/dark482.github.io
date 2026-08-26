@@ -22,59 +22,46 @@ Feel free to reach me at [sdx13431026699@gmail.com](mailto:sdx13431026699@gmail.
 
 <span class='anchor' id='-education'></span>
 
-# Education
+# 🎓 Education
 
 - *2023.09 – Present*, [HKUST (Guangzhou)](https://www.hkust-gz.edu.cn/) — B.S. in Artificial Intelligence (GPA: 3.3 / 4.3)  
   Relevant coursework: Data Structures and Algorithms (A), Machine Learning (A-), Introduction to AI (A), Mathematics for AI (A)
 - *2025.09 – 2025.12*, [UC Berkeley](https://www.berkeley.edu/) — Exchange Student (GPA: 3.9 / 4.0)  
   Relevant coursework: Computer Vision (A), Natural Language Processing (A)
 
-<span class='anchor' id='-experience'></span>
-
-# Experience
-
-- *2026.04 – Present*, **Research Intern**, supervised by Dr. Xiaoli Liu  
-  Phoneme-aware audio-to-mesh facial animation; developing semantically meaningful viseme-aware 3DMM mouth bases and phoneme-conditioned models.
-- *2026.01 – 2026.04*, **Research Intern**, supervised by Dr. Xiaoli Liu  
-  Unposed 3D Gaussian head avatar reconstruction (AnyAvatar).
-- *2025.09 – 2026.02*, **Research Assistant**, advised by Prof. Hao Wang, HKUST(GZ)  
-  Monocular 3DGS-SLAM for kilometer-scale outdoor scenes (KiloGS-SLAM).
-- *2025.05 – 2025.08*, **Research Intern**, with Prof. Shidang Xu, South China University of Technology  
-  Whole slide image classification via large-patch feature representation (CDSR).
-
 <span class='anchor' id='-research-projects'></span>
 
-# Research Projects
+# 🔬 Research Projects
 
-<div class='paper-box'><div class='paper-box-image'><div><img src='images/projects/anyavatar.png' alt="Fig. 1 AnyAvatar" width="100%"><div class="badge">ACM MM 2026 · Under Review</div></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><img src='images/projects/anyavatar.png' alt="Fig. 1 AnyAvatar" width="100%"><div class="badge">Accepted by ACM MM</div></div></div>
 <div class='paper-box-text' markdown="1">
 
 **AnyAvatar: High-Fidelity Gaussian Head Avatars under Uncalibrated Camera Settings**
 
 Yujian Liu<sup>*</sup>, **Dongxu Shen**<sup>*</sup>, Haoran Li<sup>*</sup>, Yuting Liu, Chuang Chen, Xinyi Jiang, Zhupeng Jiang, Peng Cao, Shidang Xu, Xiaoli Liu<sup>&dagger;</sup>
 
-Reconstructs animatable 3D Gaussian head avatars from uncalibrated multi-view images by jointly refining camera poses, FLAME geometry, and Gaussian appearance. Surpasses existing baselines on novel view synthesis by over 5 dB PSNR.
+Reconstructs animatable 3D Gaussian head avatars from uncalibrated multi-view images by jointly refining camera poses, FLAME geometry, and Gaussian appearance.
 
-<sup>*</sup> Equal contribution. <sup>&dagger;</sup> Corresponding author.
+[Details](/projects/anyavatar.html)
 
 </div>
 </div>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ECCV 2026 · Under Review</div></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><img src='images/projects/kilogs.png' alt="Fig. 1 KiloGS-SLAM" width="100%"><div class="badge">Accepted by ECCV</div></div></div>
 <div class='paper-box-text' markdown="1">
 
 **Robust and Efficient Monocular 3D Gaussian SLAM for Kilometer-Scale Outdoor Scenes**
 
 Sicheng Yu<sup>*</sup>, **Dongxu Shen**<sup>*</sup>, Beizheng Zhao, Guanzhi Ding, Hao Wang<sup>&dagger;</sup>
 
-KiloGS-SLAM: a monocular 3DGS-SLAM framework for kilometer-scale outdoor scenes, addressing pose tracking failure and memory overhead via texture-complexity-aware Gaussian initialization and multi-view-consistency-guided densification/pruning.
+A monocular 3DGS-SLAM framework for kilometer-scale outdoor scenes, addressing pose tracking failure and memory overhead in long-sequence reconstruction.
 
-<sup>*</sup> Equal contribution. <sup>&dagger;</sup> Corresponding author.
+[Details](/projects/kilogs-slam.html)
 
 </div>
 </div>
 
-<div class='paper-box'><div class='paper-box-image'><div><img src='images/projects/cdsr.png' alt="Fig. 1 CDSR" width="100%"><div class="badge">PRCV · Under Review</div></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><img src='images/projects/cdsr.png' alt="Fig. 1 CDSR" width="100%"><div class="badge">Accepted by PRCV</div></div></div>
 <div class='paper-box-text' markdown="1">
 
 **Minimal High-Resolution Patches Are Sufficient for Whole Slide Image Representation via Cascaded Dual-Scale Reconstruction**
@@ -83,14 +70,12 @@ Yujian Liu<sup>*</sup>, Yuechuan Lin<sup>*</sup>, **Dongxu Shen**<sup>*</sup>, H
 
 Shows that a small set of informative high-resolution patches, selected and reconstructed through cascaded dual-scale learning, is sufficient for robust WSI representation.
 
-<sup>*</sup> Equal contribution. <sup>&dagger;</sup> Corresponding author.
-
-[arXiv](https://arxiv.org/abs/2508.01641)
+[Details](/projects/cdsr.html) [arXiv](https://arxiv.org/abs/2508.01641)
 
 </div>
 </div>
 
-<div class='paper-box'><div class='paper-box-image'><div><img src='images/projects/mogaface.png' alt="Fig. 1 MoGaFace" width="100%"><div class="badge">PRCV · Under Review</div></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><img src='images/projects/mogaface.png' alt="Fig. 1 MoGaFace" width="100%"><div class="badge">Accepted by PRCV</div></div></div>
 <div class='paper-box-text' markdown="1">
 
 **MoGaFace: Momentum-Guided and Texture-Aware Gaussian Avatars for Consistent Facial Geometry**
@@ -99,9 +84,21 @@ Yujian Liu<sup>*</sup>, **Dongxu Shen**<sup>*</sup>, Chuang Chen, Zairan Wang, L
 
 Improves 3D Gaussian head avatars by jointly correcting facial geometry and recovering texture during rendering, instead of relying on a frozen tracked mesh.
 
-<sup>*</sup> Equal contribution.
+[Details](/projects/mogaface.html) [arXiv](https://arxiv.org/abs/2508.01218)
 
-[arXiv](https://arxiv.org/abs/2508.01218)
+</div>
+</div>
+
+<div class='paper-box'><div class='paper-box-image'><div><img src='images/projects/dxtalker.png' alt="Fig. 1 DXTalker" width="100%"><div class="badge">Submitted to AAAI</div></div></div>
+<div class='paper-box-text' markdown="1">
+
+**DXTalker: Factorizing Speech-Driven 3D Facial Animation via Articulatory Prototypes and Personalized Dynamics**
+
+Yujian Liu, **Dongxu Shen**, Shidang Xu, Xiaoli Liu, et al.
+
+Factorizes speech-driven 3D facial animation into shared articulatory prototypes and identity-specific dynamics for accurate lip sync and expressive motion.
+
+[Details](/projects/dxtalker.html)
 
 </div>
 </div>

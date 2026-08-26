@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dongxu Shen · Local Preview</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    :root { --text:#494e52; --heading:#111; --link:#52adc8; --border:#efefef; --badge:#00369f; --sidebar-bg:#f9f9f9; }
+    * { box-sizing:border-box; }
+    body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; font-size:16px; line-height:1.6; color:var(--text); background:#fff; }
+    a { color:var(--link); text-decoration:none; }
+    a:hover { text-decoration:underline; }
+    h1 { font-size:1.75rem; margin:2rem 0 1rem; border-bottom:1px solid var(--border); padding-bottom:.4rem; color:var(--heading); }
+    p { margin:.75rem 0; }
+    ul { padding-left:1.25rem; }
+    li { margin:.5rem 0; }
+    sup { font-size:.75em; }
+    .masthead { border-bottom:1px solid var(--border); position:sticky; top:0; background:#fff; z-index:10; }
+    .masthead__inner { max-width:1100px; margin:0 auto; padding:.75rem 1.5rem; display:flex; gap:1.5rem; flex-wrap:wrap; align-items:center; }
+    .masthead a { color:var(--text); font-size:.95rem; }
+    .preview-note { margin-left:auto; font-size:.8rem; color:#888; }
+    .layout { max-width:1100px; margin:0 auto; padding:2rem 1.5rem 4rem; display:grid; grid-template-columns:260px 1fr; gap:2.5rem; }
+    @media (max-width:800px){ .layout{ grid-template-columns:1fr; } .preview-note{ margin-left:0; width:100%; } }
+    .sidebar { background:var(--sidebar-bg); border:1px solid var(--border); border-radius:6px; padding:1.5rem; text-align:center; position:sticky; top:4rem; }
+    .sidebar img.avatar { width:140px; height:140px; border-radius:50%; object-fit:cover; margin-bottom:1rem; }
+    .sidebar h2 { margin:0 0 .25rem; font-size:1.25rem; color:var(--heading); }
+    .sidebar .bio { font-size:.9rem; color:#666; margin:.35rem 0; }
+    .sidebar .contact { list-style:none; padding:0; margin:1rem 0 0; text-align:left; font-size:.9rem; }
+    .sidebar .contact li { margin:.5rem 0; display:flex; align-items:flex-start; gap:.5rem; }
+    .sidebar .contact i { width:1.25rem; text-align:center; margin-top:.2rem; color:#666; }
+    .paper-box {
+      display:flex;
+      flex-wrap:nowrap;
+      align-items:center;
+      border-bottom:1px solid var(--border);
+      padding:2em 0;
+    }
+    .paper-box-image {
+      flex:0 0 40%;
+      max-width:40%;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+    }
+    .paper-box-image > div {
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      width:100%;
+    }
+    .paper-box-image img {
+      width:100%;
+      max-width:380px;
+      height:220px;
+      object-fit:contain;
+      background:transparent;
+      box-shadow:3px 3px 6px #888;
+    }
+    .paper-box-text {
+      flex:1 1 60%;
+      max-width:60%;
+      padding-left:2em;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+    }
+    .paper-box-text > strong {
+      display:block;
+      font-size:1.05rem;
+      line-height:1.4;
+      color:var(--heading);
+      margin:0 0 .35rem;
+    }
+    .paper-box-text .meta { font-size:.95rem; margin:.15rem 0 .75rem; color:var(--text); }
+    .paper-box-text p { margin:0 0 .85rem; }
+    .paper-box-text .links a {
+      display:inline-block;
+      margin:0 .55rem .2rem 0;
+      padding:.18rem .55rem;
+      border:1px solid var(--link);
+      border-radius:4px;
+      font-size:.85rem;
+      line-height:1.35;
+      text-decoration:none;
+      vertical-align:middle;
+      box-sizing:border-box;
+      color:var(--link);
+    }
+    .paper-box-text .links a:hover { text-decoration:none; background:rgba(82,173,200,.08); }
+    .badge {
+      display:inline-block;
+      padding:.35rem .75rem;
+      margin-top:.5em;
+      color:#fff;
+      background:var(--badge);
+      font-size:.72rem;
+      font-weight:600;
+      line-height:1.35;
+      text-align:center;
+    }
+    .anchor { scroll-margin-top:5rem; }
+    @media (max-width:800px){
+      .paper-box { flex-wrap:wrap; }
+      .paper-box-image, .paper-box-text { flex:1 1 100%; max-width:100%; padding-left:0; }
+      .paper-box-text { margin-top:1rem; }
+    }
+  </style>
+</head>
+<body>
+<header class="masthead">
+  <nav class="masthead__inner">
+    <a href="#about-me">About</a>
+    <a href="#education">Education</a>
+    <a href="#research-projects">Research Projects</a>
+    <span class="preview-note">Local HTML preview · not Jekyll</span>
+  </nav>
+</header>
+<div class="layout">
+  <aside class="sidebar">
+    <img class="avatar" src="images/picture.jpg" alt="Dongxu Shen">
+    <h2>Dongxu Shen</h2>
+    <div class="bio">UG · AI @ HKUST(GZ)</div>
+    <div>China</div>
+    <ul class="contact">
+      <li><i class="fas fa-envelope"></i><a href="mailto:sdx13431026699@gmail.com">sdx13431026699@gmail.com</a></li>
+      <li><i class="fab fa-github"></i><a href="https://github.com/dark482">dark482</a></li>
+      <li><i class="fas fa-graduation-cap"></i><a href="https://scholar.google.com/citations?hl=zh-CN&user=5z266osAAAAJ">Google Scholar</a></li>
+      <li><i class="fas fa-file-pdf"></i><a href="files/DongxuShen_CV.pdf">CV</a></li>
+    </ul>
+  </aside>
+  <main>
+    <section id="about-me" class="anchor">
+      <p>I am <strong>Dongxu Shen</strong> (沈东旭), an undergraduate student in <strong>Artificial Intelligence</strong> at <a href="https://www.hkust-gz.edu.cn/">Hong Kong University of Science and Technology (Guangzhou)</a>. I was also an exchange student at the <a href="https://www.berkeley.edu/">University of California, Berkeley</a> (Fall 2025).</p>
+      <p>My research interests lie in <strong>3D vision</strong> and <strong>neural rendering</strong>, with a long-term goal of building scalable and photorealistic 3D representations for real-world scene reconstruction. I am particularly interested in:</p>
+      <ul>
+        <li>High-fidelity <strong>3D Gaussian head avatars</strong> and speech-driven facial animation</li>
+        <li><strong>Large-scale 3D Gaussian Splatting SLAM</strong> for outdoor scenes</li>
+        <li><strong>Whole slide image (WSI)</strong> analysis and efficient high-resolution patch representation</li>
+      </ul>
+      <p>Feel free to reach me at <a href="mailto:sdx13431026699@gmail.com">sdx13431026699@gmail.com</a>.</p>
+    </section>
+
+    <section id="education" class="anchor">
+      <h1>🎓 Education</h1>
+      <ul>
+        <li><em>2023.09 – Present</em>, <a href="https://www.hkust-gz.edu.cn/">HKUST (Guangzhou)</a> — B.S. in Artificial Intelligence (GPA: 3.3 / 4.3)<br>Relevant coursework: Data Structures and Algorithms (A), Machine Learning (A-), Introduction to AI (A), Mathematics for AI (A)</li>
+        <li><em>2025.09 – 2025.12</em>, <a href="https://www.berkeley.edu/">UC Berkeley</a> — Exchange Student (GPA: 3.9 / 4.0)<br>Relevant coursework: Computer Vision (A), Natural Language Processing (A)</li>
+      </ul>
+    </section>
+
+    <section id="research-projects" class="anchor">
+      <h1>🔬 Research Projects</h1>
+
+      <div class="paper-box">
+        <div class="paper-box-image"><div>
+          <img src="images/projects/anyavatar.png" alt="Fig. 1 AnyAvatar">
+          <div class="badge">Accepted by ACM MM</div>
+        </div></div>
+        <div class="paper-box-text">
+          <strong>AnyAvatar: High-Fidelity Gaussian Head Avatars under Uncalibrated Camera Settings</strong>
+          <div class="meta">Yujian Liu<sup>*</sup>, <strong>Dongxu Shen</strong><sup>*</sup>, Haoran Li<sup>*</sup>, Yuting Liu, Chuang Chen, Xinyi Jiang, Zhupeng Jiang, Peng Cao, Shidang Xu, Xiaoli Liu<sup>&dagger;</sup></div>
+          <p>Reconstructs animatable 3D Gaussian head avatars from uncalibrated multi-view images by jointly refining camera poses, FLAME geometry, and Gaussian appearance.</p>
+          <div class="links"><a href="projects/anyavatar.html">Details</a></div>
+        </div>
+      </div>
+
+      <div class="paper-box">
+        <div class="paper-box-image"><div>
+          <img src="images/projects/kilogs.png" alt="Fig. 1 KiloGS-SLAM">
+          <div class="badge">Accepted by ECCV</div>
+        </div></div>
+        <div class="paper-box-text">
+          <strong>Robust and Efficient Monocular 3D Gaussian SLAM for Kilometer-Scale Outdoor Scenes</strong>
+          <div class="meta">Sicheng Yu<sup>*</sup>, <strong>Dongxu Shen</strong><sup>*</sup>, Beizheng Zhao, Guanzhi Ding, Hao Wang<sup>&dagger;</sup></div>
+          <p>A monocular 3DGS-SLAM framework for kilometer-scale outdoor scenes, addressing pose tracking failure and memory overhead in long-sequence reconstruction.</p>
+          <div class="links"><a href="projects/kilogs-slam.html">Details</a></div>
+        </div>
+      </div>
+
+      <div class="paper-box">
+        <div class="paper-box-image"><div>
+          <img src="images/projects/cdsr.png" alt="Fig. 1 CDSR">
+          <div class="badge">Accepted by PRCV</div>
+        </div></div>
+        <div class="paper-box-text">
+          <strong>Minimal High-Resolution Patches Are Sufficient for Whole Slide Image Representation via Cascaded Dual-Scale Reconstruction</strong>
+          <div class="meta">Yujian Liu<sup>*</sup>, Yuechuan Lin<sup>*</sup>, <strong>Dongxu Shen</strong><sup>*</sup>, Haoran Li, Yutong Wang, Xiaoli Liu, Shidang Xu<sup>&dagger;</sup></div>
+          <p>Shows that a small set of informative high-resolution patches, selected and reconstructed through cascaded dual-scale learning, is sufficient for robust WSI representation.</p>
+          <div class="links">
+            <a href="projects/cdsr.html">Details</a>
+            <a href="https://arxiv.org/abs/2508.01641">arXiv</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="paper-box">
+        <div class="paper-box-image"><div>
+          <img src="images/projects/mogaface.png" alt="Fig. 1 MoGaFace">
+          <div class="badge">Accepted by PRCV</div>
+        </div></div>
+        <div class="paper-box-text">
+          <strong>MoGaFace: Momentum-Guided and Texture-Aware Gaussian Avatars for Consistent Facial Geometry</strong>
+          <div class="meta">Yujian Liu<sup>*</sup>, <strong>Dongxu Shen</strong><sup>*</sup>, Chuang Chen, Zairan Wang, Linlang Cao, Fanyu Geng, Peng Cao, Shidang Xu, Xiaoli Liu</div>
+          <p>Improves 3D Gaussian head avatars by jointly correcting facial geometry and recovering texture during rendering, instead of relying on a frozen tracked mesh.</p>
+          <div class="links">
+            <a href="projects/mogaface.html">Details</a>
+            <a href="https://arxiv.org/abs/2508.01218">arXiv</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="paper-box">
+        <div class="paper-box-image"><div>
+          <img src="images/projects/dxtalker.png" alt="Fig. 1 DXTalker">
+          <div class="badge">Submitted to AAAI</div>
+        </div></div>
+        <div class="paper-box-text">
+          <strong>DXTalker: Factorizing Speech-Driven 3D Facial Animation via Articulatory Prototypes and Personalized Dynamics</strong>
+          <div class="meta">Yujian Liu, <strong>Dongxu Shen</strong>, Shidang Xu, Xiaoli Liu, et al.</div>
+          <p>Factorizes speech-driven 3D facial animation into shared articulatory prototypes and identity-specific dynamics for accurate lip sync and expressive motion.</p>
+          <div class="links"><a href="projects/dxtalker.html">Details</a></div>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
+</body>
+</html>

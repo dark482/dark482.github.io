@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CDSR - Dongxu Shen</title>
+  <link rel="stylesheet" href="preview-project.css">
+</head>
+<body>
+  <div class="wrap">
+    <a class="back" href="../preview.html#research-projects">← Back to Research Projects</a>
+    <h1>Minimal High-Resolution Patches Are Sufficient for Whole Slide Image Representation via Cascaded Dual-Scale Reconstruction</h1>
+    <p class="authors">Yujian Liu<sup>*</sup>, Yuechuan Lin<sup>*</sup>, <strong>Dongxu Shen</strong><sup>*</sup>, Haoran Li, Yutong Wang, Xiaoli Liu, Shidang Xu<sup>&dagger;</sup></p>
+    <p class="note">Accepted by PRCV · <a href="https://arxiv.org/abs/2508.01641">arXiv</a></p>
+    <p>Gigapixel WSIs contain sparse diagnostic regions, so dense high-resolution sampling is computationally prohibitive. Low-resolution patches and frozen pretrained encoders, however, lose morphology that downstream MIL needs. CDSR shows that a compact set of informative high-resolution regions is enough to reconstruct a slide-level representation.</p>
+    <figure class="project-figure">
+      <img src="../images/projects/cdsr_framework.png" alt="CDSR framework">
+      <figcaption>Overview of the CDSR framework.</figcaption>
+    </figure>
+    <p>A two-stage sampler first selects a small number of diverse, informative high-resolution patches from each slide. A Local-to-Global Network then encodes fine-grained morphology together with a broader tissue context and reconstructs a spatially coherent WSI representation compatible with standard MIL aggregators.</p>
+  </div>
+</body>
+</html>

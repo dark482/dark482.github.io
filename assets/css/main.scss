@@ -79,6 +79,13 @@
         max-width: 100%;
         order: 1;
 
+        > strong,
+        > p:first-child strong,
+        p strong:only-child {
+            font-size: 1.05em;
+            line-height: 1.4;
+        }
+
         p {
             margin-bottom: 0.6em;
         }
@@ -103,9 +110,12 @@
     }
 
     @include breakpoint($medium) {
+        flex-wrap: nowrap;
+
         .paper-box-image {
             justify-content: center;
             align-items: center;
+            flex: 0 0 40%;
             min-width: 200px;
             max-width: 40%;
             order: 1;
@@ -113,6 +123,7 @@
 
         .paper-box-text {
             justify-content: left;
+            flex: 1 1 60%;
             padding-left: 2em;
             max-width: 60%;
             order: 2;

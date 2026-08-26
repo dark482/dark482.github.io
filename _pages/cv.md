@@ -59,19 +59,23 @@ You can also download a PDF version of my CV: [DongxuShen_CV.pdf]({{ base_path }
 
 1. **AnyAvatar: High-Fidelity Gaussian Head Avatars under Uncalibrated Camera Settings**  
    Yujian Liu<sup>*</sup>, **Dongxu Shen**<sup>*</sup>, Haoran Li<sup>*</sup>, et al.  
-   *ACM MM 2026 (Under Review)*
+   *ACM MM 2026*
 
 2. **Robust and Efficient Monocular 3D Gaussian SLAM for Kilometer-Scale Outdoor Scenes**  
    Sicheng Yu<sup>*</sup>, **Dongxu Shen**<sup>*</sup>, Beizheng Zhao, Guanzhi Ding, Hao Wang<sup>&dagger;</sup>  
-   *ECCV 2026 (Under Review)*
+   *ECCV 2026*
 
 3. **Minimal High-Resolution Patches Are Sufficient for Whole Slide Image Representation via Cascaded Dual-Scale Reconstruction**  
    Yujian Liu<sup>*</sup>, Yuechuan Lin<sup>*</sup>, **Dongxu Shen**<sup>*</sup>, et al.  
-   *PRCV (Under Review)* · [arXiv](https://arxiv.org/abs/2508.01641)
+   *PRCV* · [arXiv](https://arxiv.org/abs/2508.01641)
 
 4. **MoGaFace: Momentum-Guided and Texture-Aware Gaussian Avatars for Consistent Facial Geometry**  
    Yujian Liu<sup>*</sup>, **Dongxu Shen**<sup>*</sup>, Chuang Chen, et al.  
-   *PRCV (Under Review)* · [arXiv](https://arxiv.org/abs/2508.01218)
+   *PRCV* · [arXiv](https://arxiv.org/abs/2508.01218)
+
+5. **DXTalker: Factorizing Speech-Driven 3D Facial Animation via Articulatory Prototypes and Personalized Dynamics**  
+   Yujian Liu, **Dongxu Shen**, Shidang Xu, Xiaoli Liu, et al.  
+   *AAAI (Submitted)*
 
 ---
 
