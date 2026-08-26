@@ -10,7 +10,7 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
-I am **Dongxu Shen** (沈东旭), an undergraduate student in **Artificial Intelligence** at [Hong Kong University of Science and Technology (Guangzhou)](https://www.hkust-gz.edu.cn/). I was also an exchange student at the [University of California, Berkeley](https://www.berkeley.edu/) (Fall 2025).
+I am **Dongxu Shen** (沈东旭), an undergraduate student in **Artificial Intelligence** at [Hong Kong University of Science and Technology (Guangzhou)](https://www.hkust-gz.edu.cn/).
 
 My research interests lie in **3D vision** and **neural rendering**, with a long-term goal of building scalable and photorealistic 3D representations for real-world scene reconstruction. I am particularly interested in:
 
@@ -18,16 +18,12 @@ My research interests lie in **3D vision** and **neural rendering**, with a long
 - **Large-scale 3D Gaussian Splatting SLAM** for outdoor scenes
 - **Whole slide image (WSI)** analysis and efficient high-resolution patch representation
 
-Feel free to reach me at [sdx13431026699@gmail.com](mailto:sdx13431026699@gmail.com).
-
 <span class='anchor' id='-education'></span>
 
 # 🎓 Education
 
-- *2023.09 – Present*, [HKUST (Guangzhou)](https://www.hkust-gz.edu.cn/) — B.S. in Artificial Intelligence (GPA: 3.3 / 4.3)  
-  Relevant coursework: Data Structures and Algorithms (A), Machine Learning (A-), Introduction to AI (A), Mathematics for AI (A)
-- *2025.09 – 2025.12*, [UC Berkeley](https://www.berkeley.edu/) — Exchange Student (GPA: 3.9 / 4.0)  
-  Relevant coursework: Computer Vision (A), Natural Language Processing (A)
+- *2023.09 – Present*, [HKUST (Guangzhou)](https://www.hkust-gz.edu.cn/) — B.S. in Artificial Intelligence
+- *2025.09 – 2025.12*, [UC Berkeley](https://www.berkeley.edu/) — Exchange Student
 
 <span class='anchor' id='-research-projects'></span>
 
@@ -42,8 +38,6 @@ Yujian Liu<sup>*</sup>, **Dongxu Shen**<sup>*</sup>, Haoran Li<sup>*</sup>, Yuti
 
 Reconstructs animatable 3D Gaussian head avatars from uncalibrated multi-view images by jointly refining camera poses, FLAME geometry, and Gaussian appearance.
 
-[Details](/projects/anyavatar.html)
-
 </div>
 </div>
 
@@ -55,8 +49,6 @@ Reconstructs animatable 3D Gaussian head avatars from uncalibrated multi-view im
 Sicheng Yu<sup>*</sup>, **Dongxu Shen**<sup>*</sup>, Beizheng Zhao, Guanzhi Ding, Hao Wang<sup>&dagger;</sup>
 
 A monocular 3DGS-SLAM framework for kilometer-scale outdoor scenes, addressing pose tracking failure and memory overhead in long-sequence reconstruction.
-
-[Details](/projects/kilogs-slam.html)
 
 </div>
 </div>
@@ -70,7 +62,7 @@ Yujian Liu<sup>*</sup>, Yuechuan Lin<sup>*</sup>, **Dongxu Shen**<sup>*</sup>, H
 
 Shows that a small set of informative high-resolution patches, selected and reconstructed through cascaded dual-scale learning, is sufficient for robust WSI representation.
 
-[Details](/projects/cdsr.html) [arXiv](https://arxiv.org/abs/2508.01641)
+[arXiv](https://arxiv.org/abs/2508.01641)
 
 </div>
 </div>
@@ -84,7 +76,7 @@ Yujian Liu<sup>*</sup>, **Dongxu Shen**<sup>*</sup>, Chuang Chen, Zairan Wang, L
 
 Improves 3D Gaussian head avatars by jointly correcting facial geometry and recovering texture during rendering, instead of relying on a frozen tracked mesh.
 
-[Details](/projects/mogaface.html) [arXiv](https://arxiv.org/abs/2508.01218)
+[arXiv](https://arxiv.org/abs/2508.01218)
 
 </div>
 </div>
@@ -94,11 +86,9 @@ Improves 3D Gaussian head avatars by jointly correcting facial geometry and reco
 
 **DXTalker: Factorizing Speech-Driven 3D Facial Animation via Articulatory Prototypes and Personalized Dynamics**
 
-Yujian Liu, **Dongxu Shen**, Shidang Xu, Xiaoli Liu, et al.
+**Dongxu Shen**<sup>*</sup>, Yujian Liu<sup>*</sup>, Shidang Xu, Xiaoli Liu, et al.
 
 Factorizes speech-driven 3D facial animation into shared articulatory prototypes and identity-specific dynamics for accurate lip sync and expressive motion.
-
-[Details](/projects/dxtalker.html)
 
 </div>
 </div>

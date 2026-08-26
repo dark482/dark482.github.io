@@ -13,14 +13,12 @@ You can also download a PDF version of my CV: [DongxuShen_CV.pdf]({{ base_path }
 ## Education
 
 - **Hong Kong University of Science and Technology (Guangzhou)**  
-  *B.S. in Artificial Intelligence* · GPA: 3.3 / 4.3  
-  Sep 2023 – Present  
-  Relevant coursework: Data Structures and Algorithms (A), Machine Learning (A-), Introduction to AI (A), Mathematics for AI (A)
+  *B.S. in Artificial Intelligence*  
+  Sep 2023 – Present
 
 - **University of California, Berkeley**  
-  *Exchange Student* · GPA: 3.9 / 4.0  
-  Sep 2025 – Dec 2025  
-  Relevant coursework: Computer Vision (A), Natural Language Processing (A)
+  *Exchange Student*  
+  Sep 2025 – Dec 2025
 
 ---
 
@@ -74,7 +72,7 @@ You can also download a PDF version of my CV: [DongxuShen_CV.pdf]({{ base_path }
    *PRCV* · [arXiv](https://arxiv.org/abs/2508.01218)
 
 5. **DXTalker: Factorizing Speech-Driven 3D Facial Animation via Articulatory Prototypes and Personalized Dynamics**  
-   Yujian Liu, **Dongxu Shen**, Shidang Xu, Xiaoli Liu, et al.  
+   **Dongxu Shen**<sup>*</sup>, Yujian Liu<sup>*</sup>, Shidang Xu, Xiaoli Liu, et al.  
    *AAAI (Submitted)*
 
 ---
