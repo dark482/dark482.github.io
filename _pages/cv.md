@@ -26,8 +26,8 @@ You can also download a PDF version of my CV: [DongxuShen_CV.pdf]({{ base_path }
 
 3D vision and neural rendering, with a long-term goal of building scalable and photorealistic 3D representations for real-world scene reconstruction. I am particularly interested in:
 
-- **3D Gaussian scene rendering**: scalable and photorealistic scene reconstruction with 3D Gaussian Splatting, including large-scale outdoor mapping, visual SLAM, and novel view synthesis under real-world capture conditions
-- **Digital humans**: high-fidelity 3D Gaussian head avatars, speech-driven facial animation, and animatable avatar reconstruction from unposed or uncalibrated multi-view observations
+- **3D Gaussian scene rendering**: 3DGS reconstruction, visual SLAM, and novel view synthesis
+- **Digital humans**: 3D Gaussian head avatars and speech-driven facial animation
 
 ---
 
