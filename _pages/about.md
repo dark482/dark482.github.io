@@ -10,7 +10,7 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
-I am **Dongxu Shen** (沈东旭), an undergraduate student in **Artificial Intelligence** at [Hong Kong University of Science and Technology (Guangzhou)](https://www.hkust-gz.edu.cn/).
+I am **Dongxu Shen** (沈东旭), an undergraduate student in **Artificial Intelligence** at Hong Kong University of Science and Technology (Guangzhou).
 
 My research interests lie in **3D vision** and **neural rendering**, with a long-term goal of building scalable and photorealistic 3D representations for real-world scene reconstruction. I am particularly interested in:
 
@@ -22,12 +22,24 @@ My research interests lie in **3D vision** and **neural rendering**, with a long
 
 # 🎓 Education
 
-- *2023.09 – Present*, [HKUST (Guangzhou)](https://www.hkust-gz.edu.cn/) — B.S. in Artificial Intelligence
-- *2025.09 – 2025.12*, [UC Berkeley](https://www.berkeley.edu/) — Exchange Student
+- *2023.09 – Present*, HKUST (Guangzhou) — B.S. in Artificial Intelligence
+- *2025.09 – 2025.12*, UC Berkeley — Exchange Student
 
 <span class='anchor' id='-research-projects'></span>
 
 # 🔬 Research Projects
+
+<div class='paper-box'><div class='paper-box-image'><div><img src='images/projects/dxtalker.png' alt="Fig. 1 DXTalker" width="100%"><div class="badge">Submitted to AAAI</div></div></div>
+<div class='paper-box-text' markdown="1">
+
+**DXTalker: Factorizing Speech-Driven 3D Facial Animation via Articulatory Prototypes and Personalized Dynamics**
+
+**Dongxu Shen**<sup>*</sup>, Yujian Liu<sup>*</sup>, Shidang Xu, Xiaoli Liu, et al.
+
+Factorizes speech-driven 3D facial animation into shared articulatory prototypes and identity-specific dynamics for accurate lip sync and expressive motion.
+
+</div>
+</div>
 
 <div class='paper-box'><div class='paper-box-image'><div><img src='images/projects/anyavatar.png' alt="Fig. 1 AnyAvatar" width="100%"><div class="badge">Accepted by ACM MM</div></div></div>
 <div class='paper-box-text' markdown="1">
@@ -77,18 +89,6 @@ Yujian Liu<sup>*</sup>, **Dongxu Shen**<sup>*</sup>, Chuang Chen, Zairan Wang, L
 Improves 3D Gaussian head avatars by jointly correcting facial geometry and recovering texture during rendering, instead of relying on a frozen tracked mesh.
 
 [arXiv](https://arxiv.org/abs/2508.01218)
-
-</div>
-</div>
-
-<div class='paper-box'><div class='paper-box-image'><div><img src='images/projects/dxtalker.png' alt="Fig. 1 DXTalker" width="100%"><div class="badge">Submitted to AAAI</div></div></div>
-<div class='paper-box-text' markdown="1">
-
-**DXTalker: Factorizing Speech-Driven 3D Facial Animation via Articulatory Prototypes and Personalized Dynamics**
-
-**Dongxu Shen**<sup>*</sup>, Yujian Liu<sup>*</sup>, Shidang Xu, Xiaoli Liu, et al.
-
-Factorizes speech-driven 3D facial animation into shared articulatory prototypes and identity-specific dynamics for accurate lip sync and expressive motion.
 
 </div>
 </div>
