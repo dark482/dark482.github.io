@@ -40,3 +40,103 @@
     "vendor/font-awesome/solid",
     "vendor/font-awesome/brands"
 ;
+
+.paper-box {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border-bottom: 1px #efefef solid;
+    padding: 2em 0 2em 0;
+
+    .paper-box-image {
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        width: 100%;
+        order: 2;
+
+        > div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
+
+        img {
+            width: 100%;
+            max-width: 380px;
+            height: 220px;
+            box-shadow: 3px 3px 6px #888;
+            object-fit: contain;
+            background: transparent;
+        }
+    }
+
+    .paper-box-text {
+        max-width: 100%;
+        order: 1;
+
+        p {
+            margin-bottom: 0.6em;
+        }
+
+        a {
+            display: inline-block !important;
+            margin: 0.2rem 0.55rem 0.2rem 0 !important;
+            padding: 0.18rem 0.55rem !important;
+            border: 1px solid var(--global-link-color) !important;
+            border-radius: 4px !important;
+            font-size: 0.85rem !important;
+            line-height: 1.35 !important;
+            text-decoration: none !important;
+            vertical-align: middle;
+            box-sizing: border-box;
+        }
+
+        a:hover {
+            text-decoration: none !important;
+            background: rgba(82, 173, 200, 0.08);
+        }
+    }
+
+    @include breakpoint($medium) {
+        .paper-box-image {
+            justify-content: center;
+            align-items: center;
+            min-width: 200px;
+            max-width: 40%;
+            order: 1;
+        }
+
+        .paper-box-text {
+            justify-content: left;
+            padding-left: 2em;
+            max-width: 60%;
+            order: 2;
+        }
+    }
+}
+
+.badge {
+    display: inline-block;
+    padding: 0.35rem 1rem;
+    margin-top: 0.75em;
+    color: white;
+    background-color: #00369f;
+    font-size: 0.72em;
+    line-height: 1.35;
+    text-align: center;
+}
+
+$scroll_offset: 2em;
+h1:before, .anchor:before {
+    content: '';
+    display: block;
+    position: relative;
+    width: 0;
+    height: $scroll_offset;
+    margin-top: -$scroll_offset;
+}

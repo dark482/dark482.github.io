@@ -12,7 +12,7 @@ site_theme               : "default"
 title                    : ""
 title_separator          : "-"
 name                     : &name "Dongxu Shen 沈东旭"
-description              : &description "Undergraduate Student of Artificial Intelligence"
+description              : &description "Undergraduate Student of Artificial Intelligence · 3D Vision & Neural Rendering"
 url                      : https://dark482.github.io # the base hostname & protocol for your site e.g. "https://[your GitHub username].github.io" or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "dark482.github.io"
@@ -25,11 +25,11 @@ author:
   avatar           : "picture.jpg"
   name             : "Dongxu Shen"
   pronouns         : # example: "he/his"  
-  bio              : "UG,HKUST(GZ)"
+  bio              : "UG · AI @ HKUST(GZ)"
   location         : "China"
   # employer         : "Hong Kong university of science and technology(Guangzhou)"
   uri              : # URL
-  email            : "sdx13431026699@gmial.com" 
+  email            : "sdx13431026699@gmail.com" 
 
   # Academic websites
   academia         : # URL
