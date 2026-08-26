@@ -24,7 +24,8 @@ You can also download a PDF version of my CV: [DongxuShen_CV.pdf]({{ base_path }
 
 ## Research Interests
 
-3D vision and neural rendering, with a focus on scalable and photorealistic 3D representations for real-world scene reconstruction — including 3D Gaussian Splatting, 3D head avatars, visual SLAM, and speech-driven facial animation.
+- **3D Gaussian scene rendering**
+- **Digital humans**
 
 ---
 

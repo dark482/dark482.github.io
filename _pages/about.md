@@ -10,13 +10,12 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
-I am **Dongxu Shen** (沈东旭), an undergraduate student in **Artificial Intelligence** at Hong Kong University of Science and Technology (Guangzhou).
+I am **Dongxu Shen**, an undergraduate student in **Artificial Intelligence** at Hong Kong University of Science and Technology (Guangzhou).
 
-My research interests lie in **3D vision** and **neural rendering**, with a long-term goal of building scalable and photorealistic 3D representations for real-world scene reconstruction. I am particularly interested in:
+My research interests focus on:
 
-- High-fidelity **3D Gaussian head avatars** and speech-driven facial animation
-- **Large-scale 3D Gaussian Splatting SLAM** for outdoor scenes
-- **Whole slide image (WSI)** analysis and efficient high-resolution patch representation
+- **3D Gaussian scene rendering**
+- **Digital humans**
 
 <span class='anchor' id='-education'></span>
 
