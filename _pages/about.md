@@ -49,6 +49,8 @@ Yujian Liu<sup>*</sup>, **Dongxu Shen**<sup>*</sup>, Haoran Li<sup>*</sup>, Yuti
 
 Reconstructs animatable 3D Gaussian head avatars from uncalibrated multi-view images by jointly refining camera poses, FLAME geometry, and Gaussian appearance.
 
+[Code](https://github.com/AISHIWEILAI/AnyAvatar)
+
 </div>
 </div>
 

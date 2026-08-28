@@ -60,7 +60,7 @@ You can also download a PDF version of my CV: [DongxuShen_CV.pdf]({{ base_path }
 
 1. **AnyAvatar: High-Fidelity Gaussian Head Avatars under Uncalibrated Camera Settings**  
    Yujian Liu<sup>*</sup>, **Dongxu Shen**<sup>*</sup>, Haoran Li<sup>*</sup>, et al.  
-   *ACM MM 2026*
+   *ACM MM 2026* · [Code](https://github.com/AISHIWEILAI/AnyAvatar)
 
 2. **Robust and Efficient Monocular 3D Gaussian SLAM for Kilometer-Scale Outdoor Scenes**  
    Sicheng Yu<sup>*</sup>, **Dongxu Shen**<sup>*</sup>, Beizheng Zhao, Guanzhi Ding, Hao Wang<sup>&dagger;</sup>  
