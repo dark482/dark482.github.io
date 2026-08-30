@@ -49,7 +49,7 @@ Yujian Liu<sup>*</sup>, **Dongxu Shen**<sup>*</sup>, Haoran Li<sup>*</sup>, Yuti
 
 Reconstructs animatable 3D Gaussian head avatars from uncalibrated multi-view images by jointly refining camera poses, FLAME geometry, and Gaussian appearance.
 
-[Code](https://github.com/AISHIWEILAI/AnyAvatar)
+[Project](https://aishiweilai.github.io/AnyAvatar.github.io/) [Code](https://github.com/AISHIWEILAI/AnyAvatar)
 
 </div>
 </div>
@@ -62,6 +62,8 @@ Reconstructs animatable 3D Gaussian head avatars from uncalibrated multi-view im
 Sicheng Yu<sup>*</sup>, **Dongxu Shen**<sup>*</sup>, Beizheng Zhao, Guanzhi Ding, Hao Wang<sup>&dagger;</sup>
 
 A monocular 3DGS-SLAM framework for kilometer-scale outdoor scenes, addressing pose tracking failure and memory overhead in long-sequence reconstruction.
+
+[Project](https://3dagentworld.github.io/KiloGS-SLAM/) [arXiv](https://arxiv.org/abs/2606.30436)
 
 </div>
 </div>
@@ -89,7 +91,7 @@ Yujian Liu<sup>*</sup>, **Dongxu Shen**<sup>*</sup>, Chuang Chen, Zairan Wang, L
 
 Improves 3D Gaussian head avatars by jointly correcting facial geometry and recovering texture during rendering, instead of relying on a frozen tracked mesh.
 
-[arXiv](https://arxiv.org/abs/2508.01218)
+[Project](https://mogaface.github.io/) [arXiv](https://arxiv.org/abs/2508.01218)
 
 </div>
 </div>

@@ -60,11 +60,11 @@ You can also download a PDF version of my CV: [DongxuShen_CV.pdf]({{ base_path }
 
 1. **AnyAvatar: High-Fidelity Gaussian Head Avatars under Uncalibrated Camera Settings**  
    Yujian Liu<sup>*</sup>, **Dongxu Shen**<sup>*</sup>, Haoran Li<sup>*</sup>, et al.  
-   *ACM MM 2026* · [Code](https://github.com/AISHIWEILAI/AnyAvatar)
+   *ACM MM 2026* · [Project](https://aishiweilai.github.io/AnyAvatar.github.io/) · [Code](https://github.com/AISHIWEILAI/AnyAvatar)
 
 2. **Robust and Efficient Monocular 3D Gaussian SLAM for Kilometer-Scale Outdoor Scenes**  
    Sicheng Yu<sup>*</sup>, **Dongxu Shen**<sup>*</sup>, Beizheng Zhao, Guanzhi Ding, Hao Wang<sup>&dagger;</sup>  
-   *ECCV 2026*
+   *ECCV 2026* · [Project](https://3dagentworld.github.io/KiloGS-SLAM/) · [arXiv](https://arxiv.org/abs/2606.30436)
 
 3. **Minimal High-Resolution Patches Are Sufficient for Whole Slide Image Representation via Cascaded Dual-Scale Reconstruction**  
    Yujian Liu<sup>*</sup>, Yuechuan Lin<sup>*</sup>, **Dongxu Shen**<sup>*</sup>, et al.  
@@ -72,7 +72,7 @@ You can also download a PDF version of my CV: [DongxuShen_CV.pdf]({{ base_path }
 
 4. **MoGaFace: Momentum-Guided and Texture-Aware Gaussian Avatars for Consistent Facial Geometry**  
    Yujian Liu<sup>*</sup>, **Dongxu Shen**<sup>*</sup>, Chuang Chen, et al.  
-   *PRCV* · [arXiv](https://arxiv.org/abs/2508.01218)
+   *PRCV* · [Project](https://mogaface.github.io/) · [arXiv](https://arxiv.org/abs/2508.01218)
 
 5. **DXTalker: Factorizing Speech-Driven 3D Facial Animation via Articulatory Prototypes and Personalized Dynamics**  
    **Dongxu Shen**<sup>*</sup>, Yujian Liu<sup>*</sup>, Shidang Xu, Xiaoli Liu, et al.  

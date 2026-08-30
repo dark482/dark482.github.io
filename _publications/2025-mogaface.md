@@ -14,4 +14,4 @@ Two-stage Gaussian avatar pipelines often freeze tracked FLAME geometry while op
 
 **Authors:** Yujian Liu<sup>*</sup>, Dongxu Shen<sup>*</sup>, Chuang Chen, Zairan Wang, Linlang Cao, Fanyu Geng, Peng Cao, Shidang Xu, Xiaoli Liu
 
-[arXiv](https://arxiv.org/abs/2508.01218)
+[Project](https://mogaface.github.io/) [arXiv](https://arxiv.org/abs/2508.01218)

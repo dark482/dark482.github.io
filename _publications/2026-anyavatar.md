@@ -13,4 +13,4 @@ Most 3D Gaussian head avatar methods assume accurately calibrated multi-view cam
 
 **Authors:** Yujian Liu<sup>*</sup>, Dongxu Shen<sup>*</sup>, Haoran Li<sup>*</sup>, Yuting Liu, Chuang Chen, Xinyi Jiang, Zhupeng Jiang, Peng Cao, Shidang Xu, Xiaoli Liu<sup>&dagger;</sup>
 
-[Code](https://github.com/AISHIWEILAI/AnyAvatar)
+[Project](https://aishiweilai.github.io/AnyAvatar.github.io/) [Code](https://github.com/AISHIWEILAI/AnyAvatar)
